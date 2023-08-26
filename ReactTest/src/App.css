@@ -1,0 +1,33 @@
+.navBar{
+    background-color:#06192E;
+}
+a {
+    color: whitesmoke!important;
+}
+.carousel-item{
+    height: 23rem;
+    background: #777;
+    color: white;
+    position: relative;
+    
+}
+.carousel-item img{
+    object-fit: contain;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.product--img{
+    height: 100%;
+    width: 100%;
+    max-width: 180px;
+    max-height: 180px;
+    margin: auto;
+}
+.btn:hover {
+    font-weight: bolder;
+ }
+.bgColor{
+    background: #ECECEC;
+    padding: 10px;
+}
