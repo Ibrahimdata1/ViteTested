@@ -8,7 +8,7 @@ const Home = () => {
     <div>
       <Carousel />
       <Container>
-        <Slider />
+        <Slider/>
         <Album />
       </Container>
     </div>

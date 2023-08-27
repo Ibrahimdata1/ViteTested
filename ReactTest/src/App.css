@@ -31,3 +31,9 @@ a {
     background: #ECECEC;
     padding: 10px;
 }
+.bgColorForPlaylist{
+    background-color: #5f60601f;
+}
+.active{
+    background-color: #5f60601f;
+}

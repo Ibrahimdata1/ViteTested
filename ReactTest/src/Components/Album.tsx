@@ -3,7 +3,7 @@ import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 
 function ImgMediaCard() {
   return (
-    <div className="container mt-4 ">
+    <div className="container mt-4">
       <div className="row">
       {productData.map((item) => (
       
