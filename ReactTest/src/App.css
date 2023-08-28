@@ -31,7 +31,7 @@ a {
     background: #ECECEC;
     padding: 10px;
 }
-.bgColorForPlaylist{
+.bgColorForPlaylist:hover{
     background-color: #5f60601f;
 }
 .active{

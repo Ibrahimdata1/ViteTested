@@ -5,7 +5,7 @@ const Nav = () => {
   return (
     <nav className="navbar navbar-expand-lg navBar">
       <div className="container-md" style={{ color: "whitesmoke" }}>
-        <a className="navbar-brand " style={{ color: "whitesmoke" }} href="#">
+        <a className="navbar-brand " style={{ color: "whitesmoke" }} href="/">
             <ImportContactsSharpIcon fontSize="large"/>
         </a>
         <button
@@ -22,13 +22,13 @@ const Nav = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Home
+              <a className="nav-link active" aria-current="page" href="/course">
+                Course
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Link
+              <a className="nav-link" href="/categoties">
+                Categories
               </a>
             </li>
             <li className="nav-item dropdown">
@@ -39,25 +39,25 @@ const Nav = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Dropdown
+                My Account
               </a>
               <ul className="dropdown-menu">
                 <li>
-                  <a className="dropdown-item" href="#">
-                    Action
+                  <a className="dropdown-item text-black" href="#">
+                    My Profile
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
-                    Another action
+                  <a className="dropdown-item text-black" href="#">
+                    Change Password
                   </a>
                 </li>
                 <li>
                   <hr className="dropdown-divider" />
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
-                    Something else here
+                  <a className="dropdown-item text-black" href="#">
+                    Sign Out
                   </a>
                 </li>
               </ul>
