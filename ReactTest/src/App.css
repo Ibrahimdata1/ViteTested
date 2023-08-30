@@ -1,9 +1,33 @@
-.navBar{
-    background-color:#06192E;
+
+.nav-item{
+    margin: 0 20px;
 }
-a {
-    color: whitesmoke!important;
+.nav-item:hover {
+    border-bottom: 2px solid #F57023;
+    margin-bottom: -2px;
+    animation: fade 2s linear infinite;
 }
+.botton--dropdown:hover{
+    border-bottom: 2px solid #F57023;
+    margin-bottom: -2px;
+    animation: fade 5s linear infinite;
+}
+@keyframes fade {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+.navbar-brand:hover{
+    transform: scale(1.5);
+    transition-duration: 1.5s;
+}
+.ShoppingIcon:hover{
+    transform: scale(1.2);
+}
+
 .carousel-item{
     height: 23rem;
     background: #777;
@@ -36,4 +60,10 @@ a {
 }
 .active{
     background-color: #5f60601f;
+}
+.navBar{
+    background-color: rgba(0, 0, 0, 0.959);
+}
+*{
+    font-family: 'Montserrat', sans-serif;
 }

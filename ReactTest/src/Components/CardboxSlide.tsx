@@ -14,7 +14,7 @@ const CardboxSlide = (props: productDataProps) => {
   return (
     <div
       className="card p-0 border-0 d-flex flex-column align-items-center"
-      style={{ maxHeight: "360px", maxWidth: "200px", cursor: "pointer" }}
+      style={{ maxHeight: "360px", maxWidth: "200px", cursor: "pointer"}}
       onMouseOver={() => setIsHovering(true)}
       onMouseOut={() => setIsHovering(false)}
     >

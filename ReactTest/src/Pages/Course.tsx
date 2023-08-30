@@ -7,7 +7,7 @@ const Course = () => {
   return (
     <div
       className="embed-responsive embed-responsive-16by9 d-flex justify-content-center pt-5"
-      style={{ backgroundColor: "#121212", color: "whitesmoke" }}
+      style={{ backgroundColor: "#121212", color: "whitesmoke", minHeight:'100vh'}}
     >
       <Container className="d-flex justify-content-center align-content-center">
         <iframe

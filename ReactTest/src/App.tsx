@@ -5,6 +5,7 @@ import { BrowserRouter,Routes,Route } from "react-router-dom";
 import Home from './Pages/Home';
 import Course from './Pages/Course';
 import Categories from './Pages/Categories';
+import ProductMom from './Pages/ProductMom';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/course' element={<Course/>}/>
           <Route path='/categories' element={<Categories/>}/>
+          <Route path='/product' element={<ProductMom/>}/>
         </Routes>
     </BrowserRouter>
   )

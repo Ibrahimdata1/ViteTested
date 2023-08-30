@@ -1,4 +1,4 @@
-import { productData } from "../data/Pic";
+import { productData } from "../data/ProductData";
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 
 function ImgMediaCard() {
