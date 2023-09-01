@@ -22,10 +22,6 @@ const Info = styled.div`
     justify-content: center;
     flex-direction: column;
 `
-const Title = styled.h1`
-    color: white;
-    margin-bottom: 20px;
-`
 const Button = styled.button`
     border: none;
     padding: 10px;
@@ -40,7 +36,6 @@ const Catagory = ({item}:any) => {
     <Container>
       <Img src={item.imageURL}/>
       <Info>
-        <Title>{item.title}</Title>
         <Button>SHOP NOW</Button>
       </Info>
     </Container>

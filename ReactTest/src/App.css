@@ -1,4 +1,6 @@
-
+*{
+    font-family: 'Montserrat', sans-serif !important;
+}
 .nav-item{
     margin: 0 20px;
 }
@@ -63,7 +65,4 @@
 }
 .navBar{
     background-color: rgba(0, 0, 0, 0.959);
-}
-*{
-    font-family: 'Montserrat', sans-serif;
 }

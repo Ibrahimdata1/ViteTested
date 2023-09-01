@@ -2,6 +2,7 @@ import { Container } from "react-bootstrap";
 import Playlist from "../Components/Playlist";
 import { useState } from "react";
 
+
 const Course = () => {
   const [vid,setVid] = useState('https://www.youtube.com/embed/GISdeIxfV1k')
   return (

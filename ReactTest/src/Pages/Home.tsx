@@ -3,7 +3,9 @@ import Carousel from "../Components/Carousel";
 import Slider from "../Components/Slider";
 import { Container } from "react-bootstrap";
 
-const Home = () => {
+
+
+const Home = ()=> {
   return (
     <div>
       <Carousel />
