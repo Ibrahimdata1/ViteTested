@@ -3,6 +3,7 @@ import NewsLetter from "../Components/NewsLetter";
 import Footer from "../Components/Footer";
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
+import { mobile } from "../Components/Responsive";
 
 const Container = styled.div`
 
@@ -10,10 +11,13 @@ const Container = styled.div`
 const Wrapper = styled.div`
     display: flex;
     padding: 50px;
+    padding-top: 90px;
+    ${mobile({flexDirection:'column',padding:'10px 0 20px 0'})}
 `;
 const InfoContainer= styled.div`
     flex: 1;
-    padding: 0 50px;
+    padding: 70px 50px;
+    ${mobile({padding:'0 10px 10px 10px'})}
 `;
 const ImgContainer = styled.div`
     flex: 1;
@@ -30,12 +34,14 @@ const Image = styled.img`
     width: 100%;
     height: 90vh;
     object-fit: contain;
+    ${mobile({height:'90%',padding:'90px 0 40px 0'})}
 `;
 const FilterContainer = styled.div`
     display: flex;
     margin: 30px 0;
     width: 50%;
     justify-content: space-between;
+    ${mobile({width:'100%'})}
 `;
 const Filter = styled.div`
     display: flex;
@@ -64,6 +70,7 @@ display: flex;
 align-items: center;
 width: 50%;
 justify-content: space-between;
+${mobile({width:'100%'})}
 `;
 const AmountContainer = styled.div`
 display: flex;

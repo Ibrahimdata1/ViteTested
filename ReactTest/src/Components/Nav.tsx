@@ -5,8 +5,8 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 const Nav = () => {
   return (
-    <div>
-      <nav className="navbar navbar-dark bg-dark d-lg-none d-flex align-content-center">
+    <div className="position-fixed" style={{height:'30px', width:'100%', zIndex:'5'}}>
+      <nav className="navbar navbar-dark bg-dark d-lg-none d-flex align-content-center w-100">
         <a
           className="navbar-brand d-flex justify-content-start ms-5"
           style={{ color: "whitesmoke"}}
@@ -44,11 +44,11 @@ const Nav = () => {
           <li className="nav-item h6 d-flex justify-content-end me-5">
             <a
               className="nav-link active"
-              style={{ color: "white" }}
+              style={{ color: "white"}}
               aria-current="page"
               href="/product"
             >
-              Products
+              Product
             </a>
           </li>
           <li className="nav-item h6 d-flex justify-content-end me-5">

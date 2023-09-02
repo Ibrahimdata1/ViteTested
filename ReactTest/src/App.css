@@ -1,6 +1,7 @@
 *{
     font-family: 'Montserrat', sans-serif !important;
 }
+html, body {width: auto!important; overflow-x: hidden!important} 
 .nav-item{
     margin: 0 20px;
 }

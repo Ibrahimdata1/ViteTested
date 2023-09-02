@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mobile } from "../Components/Responsive";
 
 const Container = styled.div`
   width: 100vw;
@@ -12,12 +13,14 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  ${mobile({paddingTop:'0'})}
 `;
 const Wrapper = styled.div`
   padding: 20px;
   width: 40%;
   background-color: whitesmoke;
   border-radius: 5px;
+  ${mobile({width:'75%'})}
 `;
 const Form = styled.form`
   display: flex;
@@ -44,6 +47,7 @@ const Button = styled.button`
   background-color: teal;
   color: white;
   border-radius: 5px;
+  ${mobile({width:'100%'})}
 
   &:hover{
     font-weight: bolder;

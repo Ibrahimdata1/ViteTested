@@ -9,10 +9,12 @@ import {
   Room,
   Twitter,
 } from "@mui/icons-material";
+import { mobile } from "./Responsive";
 
 const Container = styled.div`
   display: flex;
   align-items: start;
+  ${mobile({flexDirection:'column'})}
 `;
 const Left = styled.div`
   flex: 1;
@@ -20,6 +22,7 @@ const Left = styled.div`
   flex-direction: column;
   justify-content: start;
   padding: 20px;
+  ${mobile({alignItems:'center'})}
 `;
 const Center = styled.div`
   flex: 1;
@@ -27,10 +30,14 @@ const Center = styled.div`
 `;
 const Right = styled.div`
   flex: 1;
+  width: 100%;
   padding: 20px;
+  ${mobile({backgroundColor:'#fff8f8'})}
+  ${mobile({display:'flex',alignItems:'center',flexDirection:'column'})}
 `;
 const Title = styled.h3`
   margin-bottom: 30px;
+  ${mobile({display:'flex',justifyContent:'center'})}
 `;
 const List = styled.ul`
   margin: 0;
@@ -42,8 +49,10 @@ const List = styled.ul`
 const ListItem = styled.li`
   width: 50%;
   margin-bottom: 10px;
+  ${mobile({display:'flex',justifyContent:'center'})}
 `;
-const Logo = styled.h1``;
+const Logo = styled.h1`
+`;
 const Desc = styled.p`
   margin: 20px 0;
 `;
@@ -64,6 +73,7 @@ const ContactItem = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  ${mobile({justifyContent:'center'})}
 `;
 const Payment = styled.img`
     width: 50%;

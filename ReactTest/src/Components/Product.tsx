@@ -5,6 +5,7 @@ import {
   SearchOutlined,
   ShoppingCartOutlined,
 } from "@mui/icons-material";
+import { mobile } from "./Responsive";
 
 const Info = styled.div`
   opacity: 0;
@@ -64,11 +65,11 @@ const Icon = styled.div`
   }
 `;
 
-
 const ContainerBig = styled.div`
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
+  ${mobile({ padding: "0px" })}
 `;
 const Product = () => {
   return (
@@ -77,7 +78,7 @@ const Product = () => {
         <Container style={{ backgroundColor: "white" }}>
           <Circle />
 
-          <Image src={item.imageURL} key={item.id}/>
+          <Image src={item.imageURL} key={item.id} />
 
           <Info>
             <Icon>
