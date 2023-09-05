@@ -16,6 +16,7 @@ const Container = styled.div`
   ${mobile({paddingTop:'0'})}
 `;
 const Wrapper = styled.div`
+margin-top: 50px;
   padding: 20px;
   width: 40%;
   background-color: whitesmoke;
@@ -40,6 +41,7 @@ const Agreement = styled.span`
   margin: 20px 0;
 `;
 const Button = styled.button`
+margin: auto;
   width: 40%;
   border: none;
   padding: 15px 20px;

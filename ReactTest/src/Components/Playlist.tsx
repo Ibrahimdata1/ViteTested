@@ -12,10 +12,9 @@ const Playlist = ({ vid, setVid }: PlaylistProps) => {
     <div
       className="d-flex flex-column m-0 p-0 justify-content-start rounded"
       style={{
-        maxWidth: "360px",
+        maxHeight:'70vh',
         border: "1px solid #4E4E4E",
         overflow: "scroll",
-        maxHeight: "340px",
       }}
     >
       <Playlist_Nav />

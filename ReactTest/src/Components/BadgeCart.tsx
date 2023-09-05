@@ -11,10 +11,14 @@ const StyledBadge = styled(Badge)<BadgeProps>(({ theme }) => ({
   },
 }));
 
-export default function CustomizedBadges() {
+
+type CustomizedBadgesProps ={
+  cartItemLength:any
+}
+export default function CustomizedBadges({cartItemLength}:CustomizedBadgesProps) {
   return (
     <IconButton aria-label="cart" className='ShoppingIcon'>
-      <StyledBadge badgeContent={4} color="secondary">
+      <StyledBadge badgeContent={cartItemLength} color="secondary">
         <ShoppingCartOutlinedIcon style={{color:'white'}} fontSize='large'/>
       </StyledBadge>
     </IconButton>

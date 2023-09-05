@@ -1,29 +1,55 @@
-import { productData } from "../data/ProductData";
-import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
+import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
+import RemoveIcon from "@mui/icons-material/Remove";
+import AddIcon from "@mui/icons-material/Add";
+import { IconButton } from "@mui/material";
 
-function ImgMediaCard() {
+type ImgMediaCardProps = {
+  onAdd: any;
+  onRemove: any;
+  Item: any;
+  product: any;
+};
+function ImgMediaCard({ onAdd, onRemove, Item, product}: ImgMediaCardProps) {
   return (
-    <div className="container mt-4">
-      <div className="row">
-      {productData.map((item) => (
-      
-        <div className="col-md-6 col-lg-4 col-sm-12 d-flex justify-content-center">
-          <div className="card p-1 mt-2 border-0" style={{maxHeight:'450px', maxWidth:'250px'}}>
-            <img style={{maxHeight:'300px', maxWidth:'250px'}} src={item.imageURL}/>
-            <div className="card-body p-0" style={{textAlign:'center'}}>
-              <p className="card-header fw-bold bg-transparent border-bottom-0">{item.name}</p>
-              <p className="card-header bg-transparent border-bottom-0">{item.price}</p>
-              <div className="d-flex justify-content-center align-items-center">
-                <div className="btn-group w-100">
-                  <button className="btn btn-primary mt-2"><ShoppingCartCheckoutIcon className="me-2"/>Add to Cart</button>
-                </div>
+    <>
+      <img
+        style={{ maxHeight: "300px", maxWidth: "250px" }}
+        src={product.imageURL}
+        key={product.id}
+      />
+      <div className="card-body p-0" style={{ textAlign: "center" }}>
+        <p className="card-header fw-bold bg-transparent border-bottom-0">
+          {product.name}
+        </p>
+        <p className="card-header bg-transparent border-bottom-0">
+          {product.price}
+        </p>
+        <div className="d-flex justify-content-center align-items-center">
+          <div className="btn-group w-100 d-flex justify-content-center">
+            {Item ? (
+              <div>
+                <IconButton onClick={() => onRemove(Item)}>
+                  <RemoveIcon style={{color:'red'}}/>
+                </IconButton>
+                <span className="p-1">{Item.qty}</span>
+                <IconButton onClick={() => onAdd(Item)}>
+                  <AddIcon style={{color:'green'}}/>
+                </IconButton>
               </div>
-            </div>
+            ) : (
+              <button
+                className="btn btn-primary mt-2"
+                onClick={() => onAdd(product)}
+              >
+                <ShoppingCartCheckoutIcon className="me-2" />
+                Add to Cart
+              </button>
+            )}
           </div>
         </div>
-      ))}
       </div>
-    </div>
+      
+    </>
   );
 }
-export default ImgMediaCard
+export default ImgMediaCard;

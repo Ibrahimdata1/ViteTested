@@ -2,8 +2,23 @@ import ImportContactsSharpIcon from "@mui/icons-material/ImportContactsSharp";
 import DensityMediumSharpIcon from "@mui/icons-material/DensityMediumSharp";
 import BadgeCart from "./BadgeCart";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import { useState } from "react"
+import ModalComponent from "./ModalComponent";
+import { productData } from "../data/ProductData";
 
-const Nav = () => {
+
+type NavProps = {
+  cartItemLength:any,
+  setCartItem:any,
+  onAdd:any,
+  onRemove:any,
+  cartItem:any,
+}
+const Nav = ({cartItem,setCartItem,onAdd,onRemove,cartItemLength}:NavProps) => {
+  const [show,setShow] = useState(false);
+  const handleShow = () =>{setShow(true);}
+  const handleClose =() =>{ setShow(false);}
+
   return (
     <div className="position-fixed" style={{height:'30px', width:'100%', zIndex:'5'}}>
       <nav className="navbar navbar-dark bg-dark d-lg-none d-flex align-content-center w-100">
@@ -29,7 +44,7 @@ const Nav = () => {
         </div>
       </nav>
 
-      <div className="collapse" id="navbarToggleExternalContent">
+      <div className="collapse" id="navbarToggleExternalContent" style={{zIndex:'3'}}>
         <ul className="navbar-nav me-auto mb-lg-0 bg-black p-2">
           <li className="nav-item h6 d-flex justify-content-end me-5">
             <a
@@ -173,18 +188,23 @@ const Nav = () => {
                     className="nav-link active "
                     style={{ color: "white" }}
                     aria-current="page"
-                    href="/course"
+                    href="/cart"
                   >
-                    Course
+                    Choosing Books
                   </a>
                 </li>
               </ul>
-              <BadgeCart />
+                <a onClick={handleShow}><BadgeCart cartItemLength={cartItemLength}/></a>
             </form>
           </div>
         </div>
       </nav>
+      {productData.map((product) => (
+      <ModalComponent show={show} onAdd={onAdd} setCartItem={setCartItem} onRemove={onRemove} product={product} handleClose={handleClose} Item={cartItem.find((e: any) => e.id === product.id)} cartItem={cartItem}/>
+      ))}
     </div>
+    
+    
   );
 };
 

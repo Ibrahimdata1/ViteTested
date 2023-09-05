@@ -24,48 +24,48 @@ export const responsive = {
         id:1,
         imageURL:"/images/book1.jpg",
         name:'book1',
-        price:'$24.46'
+        price:'24.46'
     },
     {
         id:2,
         imageURL:"/images/book2.jpg",
         name:'book2',
-        price:'$75.46'
+        price:'75.46'
     },
     {
         id:3,
         imageURL:"/images/book3.jpg",
         name:'book3',
-        price:'$24.46'
+        price:'24.46'
     },
     {
         id:4,
         imageURL:"/images/book4.jpg",
         name:'book4',
-        price:'$23.76'
+        price:'23.76'
     },
     {
         id:5,
         imageURL:"/images/book5.jpg",
         name:'book5',
-        price:'$13.99'
+        price:'13.99'
     },
     {
         id:6,
         imageURL:"/images/book2.jpg",
         name:'book6',
-        price:'$89.34'
+        price:'89.34'
     },
     {
         id:7,
         imageURL:"/images/book5.jpg",
         name:'book7',
-        price:'$29.34'
+        price:'29.34'
     },
     {
         id:8,
         imageURL:"/images/book3.jpg",
         name:'book8',
-        price:'$89.23'
+        price:'89.23'
     },
   ]

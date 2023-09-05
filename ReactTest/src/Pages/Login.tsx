@@ -15,6 +15,7 @@ const Container = styled.div`
   justify-content: center;
 `;
 const Wrapper = styled.div`
+margin-top: 50px;
   padding: 20px;
   width: 25%;
   background-color: white;
@@ -35,7 +36,10 @@ const Input = styled.input`
   padding: 10px;
 `;
 const Button = styled.button`
-  width: 40%;
+margin: auto;
+display: flex;
+justify-content: center;
+  width: 90%;
   border: none;
   padding: 15px 20px;
   cursor: pointer;
