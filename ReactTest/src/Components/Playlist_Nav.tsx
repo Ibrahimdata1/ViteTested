@@ -7,7 +7,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 
 const Playlist_Nav = () => {
   return (
-    <AppBar position="sticky" style={{zIndex:'0'}}>
+    <AppBar position="sticky" style={{zIndex:'1'}}>
       <Toolbar
         variant="dense"
         disableGutters

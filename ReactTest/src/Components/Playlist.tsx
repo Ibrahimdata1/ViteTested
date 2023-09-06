@@ -12,13 +12,13 @@ const Playlist = ({ vid, setVid }: PlaylistProps) => {
     <div
       className="d-flex flex-column m-0 p-0 justify-content-start rounded"
       style={{
-        maxHeight:'70vh',
+        maxHeight:'80vh',
         border: "1px solid #4E4E4E",
         overflow: "scroll",
       }}
     >
       <Playlist_Nav />
-      <div className="container d-flex flex-column align-items-center p-4 w-100">
+      <div className="container d-flex flex-column align-items-center p-4 w-100" style={{zIndex:'0'}}>
         <div
           className={`row w-100 d-flex align-items-center border-0 py-2 rounded ${
             vid == "https://www.youtube.com/embed/GISdeIxfV1k" ? "active" : ""

@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState,useEffect} from 'react'
 import './App.css'
 import Nav from './Components/Nav';
 import { BrowserRouter,Routes,Route } from "react-router-dom";
@@ -11,6 +11,7 @@ import Cart from './Pages/Cart';
 import Register from './Pages/Register';
 import Login from './Pages/Login';
 import Checkout from './Pages/Checkout';
+import VideoPage from './Pages/VideoPage';
 
 function App() {
   const [cartItem,setCartItem] = useState<any[]>([])
@@ -21,23 +22,32 @@ function App() {
       const newCartItems = cartItem.map((e)=>
       e.id === item.id ? {...exist,qty:exist.qty + 1} : e);
       setCartItem(newCartItems)
+      localStorage.setItem('cartItem',JSON.stringify(newCartItems));
     }else{
       const newCartItems = [...cartItem,{...item,qty:1}];
       setCartItem(newCartItems)
+      localStorage.setItem('cartItem',JSON.stringify(newCartItems));
     }
   }
   const onRemove = (item:any) =>{
     const exist = cartItem.find((e) => e.id === item.id);
     if (exist.qty === 1) {
-      setCartItem(cartItem.filter((e) => e.id !== item.id));
+      const newCartItems = cartItem.filter((e) => e.id !== item.id)
+      setCartItem(newCartItems);
+      localStorage.setItem('cartItem',JSON.stringify(newCartItems));
     } else {
-      setCartItem(
-        cartItem.map((e) =>
-          e.id === item.id ? { ...exist, qty: exist.qty - 1 } : e
-        )
-      );
+      const newCartItems = cartItem.map((e) =>
+      e.id === item.id ? { ...exist, qty: exist.qty - 1 } : e
+    )
+      setCartItem(newCartItems);
+      localStorage.setItem('cartItem',JSON.stringify(newCartItems));
     }
   }
+  useEffect(()=>{
+    setCartItem(
+      localStorage.getItem('cartItem') ?  JSON.parse(localStorage.getItem('cartItem')!) : []
+    )
+  },[])
   return (
     
     <BrowserRouter>
@@ -52,6 +62,7 @@ function App() {
           <Route path='/register' element={<Register/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/checkout' element={<Checkout/>}/>
+          <Route path='/videopage' element={<VideoPage/>}/>
         </Routes>
     </BrowserRouter>
   )

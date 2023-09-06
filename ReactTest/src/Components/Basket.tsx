@@ -18,10 +18,12 @@ const Basket = ({ cartItem, onAdd, onRemove, setCartItem }: BasketProps) => {
   const shippingPrice = itemsPrice > 2000 ? 0 : 20;
   const totalPrice = itemsPrice + shippingPrice;
   const deleted = (item: any) => {
-    setCartItem(cartItem.filter((e: any) => e.id !== item.id));
+    const newcartItems = cartItem.filter((e: any) => e.id !== item.id)
+    setCartItem(newcartItems);
+    localStorage.setItem('cartItem',JSON.stringify(newcartItems));
   };
   return (
-    <aside className="d-block w-100 p-4 h-100">
+    <aside className="d-flex flex-column w-100 p-4 h-100 justify-content-center">
       <h2 className="mb-3 d-flex justify-content-center">Cart Items</h2>
       <div>
         {cartItem.length === 0 && <div>Cart is empty</div>}
