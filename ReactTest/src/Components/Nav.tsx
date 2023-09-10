@@ -136,9 +136,9 @@ const Nav = ({cartItem,setCartItem,onAdd,onRemove,cartItemLength}:NavProps) => {
                 <a
                   className="nav-link"
                   style={{ color: "white" }}
-                  href="/categoties"
+                  href="/videopage"
                 >
-                  Categories
+                  Student Of Knowledge
                 </a>
               </li>
             </ul>

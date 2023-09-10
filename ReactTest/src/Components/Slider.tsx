@@ -1,21 +1,36 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import CardboxSlide from "./CardboxSlide";
-import { productData, responsive } from "../data/ProductData";
+import { responsive } from "../data/ProductData";
+import styled from "styled-components";
 
-const Slider = () => {
+type SliderProps = {
+  title:any;
+  sliderData:any;
+  setMainImage:any;
+  mainImage:any;
+  onAddImg:any
+}
+const Slider = ({title,sliderData,setMainImage,mainImage,onAddImg}:SliderProps) => {
   
-const product = productData.map((item)=>(
-     <CardboxSlide name={item.name} imgURL={item.imageURL} id={item.id} price={item.price}/>
-  ))
-
+const Container = styled.div`
+  
+`
+const Title = styled.h5`
+  border-bottom: 2px solid #F4F5F6;
+  color: #ff6b00ff;
+  font-weight: bold;
+  margin-bottom: 20px;
+`
   return (
-    <div>
-      <h1>React Multi Carousel</h1>
+    <Container>
+      <Title>{title}</Title>
       <Carousel responsive={responsive}>
-        {product}
+      {sliderData.map((item:any)=>(
+     <CardboxSlide sliderData={item} mainImage={mainImage} setMainImage={setMainImage} onAddImg={onAddImg}/>
+     ))} 
       </Carousel>
-    </div>
+    </Container>
   );
 };
 

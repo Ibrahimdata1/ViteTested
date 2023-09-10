@@ -13,23 +13,33 @@ color: whitesmoke;
 const Wrapper = styled.div`
   padding: 20px;
 `;
-const Title = styled.h1`
-  text-align: center;
-  padding-bottom: 10px;
+const Title = styled.h3`
+
 `;
 const Top = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 20px;
+  justify-content: space-between;
+  padding: 20px 20px 40px 20px;
 `;
 const TopButton = styled.button`
   padding: 10px;
   cursor: pointer;
   border: ${(props) => props.typeof === "filled" && "none"};
   background-color: ${(props) =>
-    props.typeof === "filled" ? "black" : "transparent"};
+    props.typeof === "filled" ? "#ff6b00ff" : "transparent"};
   color: ${(props) => props.typeof === "filled" && "white"};
+  width: 25vw;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  transition: color 0.5s, transform 0.2s;
+  filter: brightness(95%);
+  &:active{
+    transform: translateY(3px)
+  }
+  &:hover{
+    filter: brightness(100%);
+  }
 `;
 const Main = styled.div`
   display: flex;

@@ -30,7 +30,6 @@ const Basket = ({ cartItem, onAdd, onRemove, setCartItem }: BasketProps) => {
         {cartItem.map((item: any) => (
           <div
             className="row d-flex align-items-center pb-3 mb-2"
-            style={{ overflow: "scroll"}}
           >
             <div className="col-12 col-lg-auto d-flex justify-content-center">{item.name}</div>
             <div className="col-3 col-lg-3 d-flex justify-content-center">

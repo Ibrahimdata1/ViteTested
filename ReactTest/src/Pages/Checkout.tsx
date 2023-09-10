@@ -2,6 +2,11 @@ import styled from "styled-components";
 import Footer from "../Components/Footer";
 import { Add, Remove } from "@mui/icons-material";
 import { mobile } from "../Components/Responsive";
+import {useState} from 'react'
+import { useLocation } from "react-router-dom";
+
+
+
 
 const Container = styled.div``;
 const Wrapper = styled.div`
@@ -126,8 +131,12 @@ const Button = styled.button`
   ${mobile({marginTop:'0'})}
 `;
 
-const Checkout = () => {
+type CheckoutProps ={
+}
+const Checkout = (mainImage:any) => {
+
   return (
+    
     <Container>
       <Wrapper>
         <Title>YOUR KITAB</Title>
@@ -143,7 +152,9 @@ const Checkout = () => {
           <Info>
             <Product>
               <ProductDetails>
-                <Image src="/images/book3.jpg" />
+                
+                <Image src={mainImage} key={mainImage.id}/>
+                
                 <Details>
                   <ProductName>
                     <b>Product: </b>Book1
@@ -158,6 +169,7 @@ const Checkout = () => {
                     <b>Copy: </b>Saudi{" "}
                   </ProductCopy>
                 </Details>
+                
               </ProductDetails>
               <PriceDetail>
                 <ProductAmountContainer>
@@ -171,7 +183,9 @@ const Checkout = () => {
             <Hr />
             <Product>
               <ProductDetails>
-                <Image src="/images/book2.jpg" />
+
+                <Image src={mainImage} key={mainImage.id}/>
+
                 <Details>
                   <ProductName>
                     <b>Product: </b>Book2
@@ -196,7 +210,9 @@ const Checkout = () => {
                 <ProductPrice>$ 60</ProductPrice>
               </PriceDetail>
             </Product>
+            
           </Info>
+          
           <Summary>
             <SummaryTitle>ORDER SUMMARY</SummaryTitle>
             <SummaryItem>
@@ -217,10 +233,12 @@ const Checkout = () => {
             </SummaryItem>
             <Button>CHECKOUT NOW</Button>
           </Summary>
+          
         </Bottom>
         <Footer />
       </Wrapper>
     </Container>
+    
   );
 };
 
